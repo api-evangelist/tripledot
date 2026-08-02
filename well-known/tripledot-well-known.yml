@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: live probe of https://tripledotstudios.com/.well-known/ and https://www.tripledotstudios.com/
+host: https://www.tripledotstudios.com
+notes: >-
+  Every /.well-known/ discovery document probed returned HTTP 400 (the Wix-hosted
+  site answers unknown paths with 400, verified against a control path). Tripledot
+  publishes no security.txt, no OIDC/OAuth metadata, no api-catalog and no
+  ai-plugin.json — so no WellKnown, SecurityTxt or APICatalog pointer is wired into
+  apis.yml. The site DOES publish a real /llms.txt (Wix-generated, advertising the
+  site's MCP endpoint) — captured verbatim at llms/tripledot-llms.txt — and a live
+  MCP endpoint at /_api/mcp, captured at mcp/tripledot-mcp.yml. This file is the
+  audit record of the probe so re-runs are cheap.
+documents:
+- path: /.well-known/security.txt
+  status: 400
+- path: /.well-known/openid-configuration
+  status: 400
+- path: /.well-known/oauth-authorization-server
+  status: 400
+- path: /.well-known/api-catalog
+  status: 400
+- path: /.well-known/ai-plugin.json
+  status: 400
+- path: /llms.txt
+  status: 200
+  file: ../llms/tripledot-llms.txt
+- path: /_api/mcp
+  status: 200
+  file: ../mcp/tripledot-mcp.yml

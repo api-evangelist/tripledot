@@ -1,21 +1,103 @@
 aid: tripledot
 name: Tripledot
-description: Tripledot is a company surfaced as a portfolio company of lightspeed-venture-partners and
-  added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: 'Tripledot Studios (Tripledot Group) is a London-headquartered mobile games
+  developer and publisher focused on data-driven casual games, with chart-topping titles
+  including Woodoku, Solitaire, Duplica, Wordhop, Solitaire Scapes, Sudoku, Spider Solitaire
+  and Blackjack played by more than 25 million daily active users. Founded as an independent
+  studio and named Best Developer at the Pocket Gamer Mobile Games Awards 2023, Tripledot
+  closed an $800 million acquisition of AppLovin''s mobile games studio portfolio (ten
+  studios) on July 1, 2025, and is backed by investors including Lightspeed Venture
+  Partners. Tripledot publishes no first-party developer API, portal or SDKs, but its
+  website ships a real llms.txt and a live, publicly connectable MCP endpoint (the Wix
+  Site Visitor Assistant) for agentic access to site content.'
 url: https://raw.githubusercontent.com/api-evangelist/tripledot/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://static.wixstatic.com/media/252a37_92f59b4130da48aba5320e9755469105~mv2.png/v1/fill/w_322,h_88,al_c,q_85/tdsgames-logo2.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - lightspeed-venture-partners
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: no-public-api-surface
+x-headquarters: The Lantern, 75 Hampstead Rd, London NW1 2PL, United Kingdom
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Gaming
+- Mobile Games
+- Casual Games
+- Games Publisher
+- Entertainment
+- United Kingdom
 apis: []
+common:
+- type: DomainSecurity
+  url: security/tripledot-domain-security.yml
+- type: Website
+  name: Tripledot Games
+  url: https://www.tripledotstudios.com/
+- type: CorporateWebsite
+  name: Tripledot Group corporate site
+  url: https://tripledot.com/
+- type: MCPServer
+  name: Tripledot site MCP endpoint (Wix Site Visitor Assistant)
+  url: mcp/tripledot-mcp.yml
+- type: LLMsTxt
+  name: Tripledot llms.txt (published by the site)
+  url: llms/tripledot-llms.txt
+- type: Blog
+  name: Tripledot Games blog
+  url: https://www.tripledotstudios.com/blog
+- type: GitHubOrganization
+  name: Tripledot Studios on GitHub
+  url: https://github.com/tripledotstudios
+- type: Careers
+  name: Careers at Tripledot
+  url: https://www.tripledotstudios.com/careers
+- type: TermsOfService
+  name: Terms of Service
+  url: https://www.tripledotstudios.com/tos
+- type: PrivacyPolicy
+  name: Privacy Policy
+  url: https://www.tripledotstudios.com/policy
+- type: CommunityRules
+  name: Community Rules
+  url: https://www.tripledotstudios.com/community-rules
+- type: AppStore
+  name: Tripledot Studios on the Apple App Store
+  url: https://apps.apple.com/us/developer/tripledot-studios/id1191319103
+- type: GooglePlay
+  name: Tripledot Studios on Google Play
+  url: https://play.google.com/store/apps/dev?id=7461875482624565371
+- type: LinkedIn
+  name: Tripledot Studios on LinkedIn
+  url: https://www.linkedin.com/company/tripledot-studios/
+- type: XTwitter
+  name: Tripledot Games on X
+  url: https://x.com/tripledotgames
+- type: Facebook
+  name: Tripledot Studios on Facebook
+  url: https://www.facebook.com/tripledotstudios/
+- type: Instagram
+  name: Tripledot Studios on Instagram
+  url: https://www.instagram.com/tripledotstudios/
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 4
+  pass: local-v1
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
