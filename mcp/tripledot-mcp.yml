@@ -2,16 +2,13 @@ generated: '2026-07-21'
 method: searched
 source: https://tripledotstudios.com/llms.txt
 status: published
-notes: >-
-  Tripledot Studios publishes a live, hosted MCP server for its website — the Wix
-  "Site Visitor Assistant" advertised in the site's own /llms.txt under "AI Agent
-  Access". The endpoint was probed live on 2026-07-21: a JSON-RPC initialize
-  returned protocolVersion 2025-03-26 with serverInfo name 'Site Visitor Assistant
-  for site "Tripledot Games"', and tools/list returned the nine tools below. No
-  authentication is required to connect; only public site information is exposed,
-  and visitor actions use a GenerateVisitorToken-issued visitor token. This is a
-  platform-provided (Wix) site MCP, not a Tripledot-built games API — Tripledot
-  publishes no first-party developer API.
+notes: 'Tripledot Studios publishes a live, hosted MCP server for its website — the Wix "Site Visitor
+  Assistant" advertised in the site''s own /llms.txt under "AI Agent Access". The endpoint was probed
+  live on 2026-07-21: a JSON-RPC initialize returned protocolVersion 2025-03-26 with serverInfo name ''Site
+  Visitor Assistant for site "Tripledot Games"'', and tools/list returned the nine tools below. No authentication
+  is required to connect; only public site information is exposed, and visitor actions use a GenerateVisitorToken-issued
+  visitor token. This is a platform-provided (Wix) site MCP, not a Tripledot-built games API — Tripledot
+  publishes no first-party developer API.'
 server:
   name: Site Visitor Assistant for site "Tripledot Games"
   version: 1.0.0
@@ -25,7 +22,9 @@ probe:
   date: '2026-07-21'
   initialize_status: 200
   tools_list_status: 200
-  capabilities: [tools, logging]
+  capabilities:
+  - tools
+  - logging
 tools:
 - name: GetBusinessDetails
   description: Get business and site details (timezone, email, phone, address, site features).
@@ -45,3 +44,11 @@ tools:
   description: Fetches the full request/response schema for a Wix API method.
 - name: BrowseWixRESTDocsMenu
   description: Browse the Wix REST API documentation menu hierarchy.
+deployment:
+  mode: remote
+  endpoint: https://www.tripledotstudios.com/_api/mcp
+  verified: probed
+  probe: live
+  tools: 9
+  checked: '2026-08-12'
+  source: catalog MCP census
